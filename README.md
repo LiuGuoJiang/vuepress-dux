@@ -12,26 +12,19 @@
    ```bash
    pnpm install
    ```
-   如果默认 npm 源被限制，可临时指定可用镜像（任选其一）：
+   如果默认 npm 源被限制，可临时指定镜像：
    ```bash
    pnpm install --registry https://registry.npmmirror.com
-   pnpm install --registry https://registry.npmjs.org
-   pnpm install --registry https://registry.yarnpkg.com
    ```
-   403/超时通常代表当前网络无法访问该源，请更换镜像或使用公司内网私服。
-2. 启动示例站点（依赖成功安装后才不会出现 “Cannot find package 'vuepress'” 报错）：
+2. 启动示例站点：
    ```bash
-   pnpm --filter @dux/demo-site dev
+   pnpm --filter @dux/theme dev
    ```
-   如果你更习惯从主题包启动，原有命令仍然可用：`pnpm --filter @dux/theme dev`。
 3. 构建示例站点：
    ```bash
-   pnpm --filter @dux/demo-site build
+   pnpm --filter @dux/theme build
    ```
    构建结果输出在 `demo/.vuepress/dist/`，如果未运行构建将看不到生成的静态文件。
-
-### 常见问题
-- 报错 `Cannot find package 'vuepress'`：依赖未装全或安装被 403 拦截。请切换上方镜像重新执行 `pnpm install`，确认 `node_modules/.pnpm/vuepress@*` 目录已生成后再启动。
 
 ## 下一步
 - 为首页列表/侧栏组件接入真实数据源（frontmatter 或插件）。
