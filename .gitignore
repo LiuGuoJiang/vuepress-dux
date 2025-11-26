@@ -1,0 +1,9 @@
+node_modules
+.pnp.*
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+.temp
+.cache
+.vuepress/dist
+.DS_Store

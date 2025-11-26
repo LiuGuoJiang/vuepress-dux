@@ -1,0 +1,12 @@
+:root {
+  --dux-bg: #f8fafc;
+  --dux-card: #ffffff;
+  --dux-primary: #2563eb;
+  --dux-text: #111827;
+}
+
+body {
+  background: var(--dux-bg);
+  color: var(--dux-text);
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
