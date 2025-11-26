@@ -1,0 +1,14 @@
+{
+  "name": "vuepress-dux-monorepo",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "workspaces": [
+    "theme",
+    "demo"
+  ],
+  "scripts": {
+    "lint": "echo 'lint placeholder'",
+    "build": "echo 'build demo with vuepress'"
+  }
+}
