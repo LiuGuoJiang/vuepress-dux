@@ -1,0 +1,46 @@
+name: Incident
+about: Create or update an incident command thread
+title: "INC-YYYYMMDD-service-short-summary"
+labels:
+  - incident
+body:
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - sev1
+        - sev2
+        - sev3
+    validations:
+      required: true
+  - type: input
+    id: owner
+    attributes:
+      label: Incident owner
+      description: GitHub handle for current incident lead
+      placeholder: "@LiuGuoJiang"
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: User impact
+      description: What users are affected and how?
+    validations:
+      required: true
+  - type: textarea
+    id: timeline
+    attributes:
+      label: Timeline updates
+      description: Keep timestamped updates here.
+      placeholder: |
+        2026-05-27T15:00Z - Incident opened
+        2026-05-27T15:10Z - Mitigation in progress
+    validations:
+      required: true
+  - type: textarea
+    id: resolution
+    attributes:
+      label: Resolution and follow-ups
+      description: Root cause and action items after recovery
